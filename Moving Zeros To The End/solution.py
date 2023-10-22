@@ -3,11 +3,9 @@ def move_zeros(lst):
     zeros_count = 0
     for i in lst:
         if i == 0:
-            zeros_count += 1
-        else:
-            ret_lst.append(i)
-    for i in range(zeros_count):
-        ret_lst.append(0)
+            lst.remove(i)
+            lst.append(i)
+            counter += 1
     return ret_lst
     
 
